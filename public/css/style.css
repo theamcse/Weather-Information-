@@ -1,0 +1,140 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+body{
+    padding:20px;
+    font-family: "Bebas Neue";
+    font-weight: 400;
+    font-size: 25px;
+    line-height: 1.7;
+    color: #777777
+}
+.header{
+    height: 95vh;
+    position: relative;
+    background-image:linear-gradient(to right bottom,#15ff009d,rgb(0, 255, 255,0.8)) ,url(../img/weather.jpeg);
+    background-size: cover;
+    background-position: top;
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+}
+.logo-box{
+    position: absolute;
+    top: 40px;
+    left: 40px;
+}
+.logo{
+    height: 65px;
+}
+.heading-primary{
+color: #ffffff;
+text-transform: uppercase;
+backface-visibility: hidden;
+margin-bottom: 60px;
+}
+.heading-primary-main{
+    display: block;
+    font-size: 60px;
+    font-weight: 400 ;
+    letter-spacing: 45px;
+    animation: moveInleft 1.5s;
+    animation-timing-function: ease-out;
+}
+.heading-primary-sub{
+    display:block;
+    font-size: 20px;
+    font-weight: 400;
+    letter-spacing: 11.5px;
+    animation: moveInright 1.5s;
+    animation-timing-function: ease-out;
+
+}
+.text-box{
+    position: absolute;
+    text-align: center;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+@keyframes moveInleft{
+    0%{
+        opacity:0;
+        transform:translateX(-100px);
+    }
+    80%{
+        transform: translateX(10px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes moveInright{
+    0%{
+        opacity:0;
+        transform:translateX(+100px);
+    }
+    80%{
+        transform: translateX(-10px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.btn:link,
+.btn:visited{
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    display: inline;
+    text-decoration: none;
+    padding: 10px 30px;
+    border-radius: 100px;
+    display: inline-block;
+    transition: all .2s;
+}
+
+.btn:hover{
+    transform: translateY(-3px);
+    box-shadow: 0 2px 20px rgba(0,0,0,0.2)
+   
+}
+
+.btn:active{
+    transform: translateY(-1px);
+    box-shadow: 0 5px 20px rgba(0, 0,0,.2);
+}
+
+.btn-white{
+    color: #777777;;
+    background-color: #ffffff;
+    
+}
+
+#location {
+    background-color:rgba(0, 0, 0, 0);
+    transform: translateX(-10px);
+    letter-spacing: 2px;
+    color:white;
+    padding-left: 20px;
+    text-align: center;
+    font-size: 20px;
+    border: none;
+    outline:none;
+    height:30px;
+    margin-bottom: 20px;
+    transition:height 1s;
+    -webkit-transition:height 1s;
+}
+.location-details{
+    position: relative;
+    top:55%;
+    left:50%;
+    color: white;
+    left:20px ;
+    text-align: center;
+
+}
