@@ -14,7 +14,7 @@ const message2=document.querySelector('#message-2')
         const location=search.value
         message1.textContent="Loading..."
         message2.textContent=''
-        fetch('http://localhost:3000/weather?address='+location).then((response)=>{
+        fetch('/weather?address='+location).then((response)=>{
         response.json().then((data)=>{
             // console.log(message1.textContent)
             // console.log(message2.textContent)

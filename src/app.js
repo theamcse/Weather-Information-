@@ -4,6 +4,8 @@ const hbs=require('hbs');
 const app= express()
 const geocode=require('./utils/geocode')
 const forecast=require('./utils/forecast')
+const port=process.env.PORT || 3000
+
 
 const pathviews=path.join(__dirname,'../templates/views')
 const partialPath=path.join(__dirname,'../templates/partials')
@@ -81,6 +83,6 @@ app.get('*',(req,res)=>{
 //     res.send(express.static(helpPath))
 // })
 
-app.listen(3000,()=>{
-    console.log("We are at port 3000")
+app.listen(port,()=>{
+    console.log("We are at port "+port)
 })
