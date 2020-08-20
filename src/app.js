@@ -83,6 +83,6 @@ app.get('*',(req,res)=>{
 //     res.send(express.static(helpPath))
 // })
 
-app.listen(port,()=>{
+app.listen(3000,()=>{
     console.log("We are at port "+port)
 })
